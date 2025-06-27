@@ -1,19 +1,21 @@
 # SVT Encore
+
 [![License](https://img.shields.io/badge/license-EUPL-brightgreen.svg)](https://eupl.eu/)
 [![REUSE status](https://api.reuse.software/badge/github.com/fsfe/reuse-tool)](https://api.reuse.software/info/github.com/fsfe/reuse-tool)
 
+> This is Viostream's private version of SVT's encore - used for our arm64 build. To contribute upstream,
+> please use https://github.com/Viostream/encore instead
 
 <img align="center" width="30%" src="https://raw.githubusercontent.com/svt/encore-doc/main/src/img/svt_encore_logo.png">
 
 &nbsp;
 &nbsp;
-  
-SVT *Encore* is a scalable video transcoding tool, built on Open Source giants like [FFmpeg](https://www.ffmpeg.org/) and [Spring Boot](https://spring.io/projects/spring-boot).
 
+SVT _Encore_ is a scalable video transcoding tool, built on Open Source giants like [FFmpeg](https://www.ffmpeg.org/) and [Spring Boot](https://spring.io/projects/spring-boot).
 
-*Encore* was created to scale, and abstract the transcoding _power of FFmpeg_, and to offer a simple solution for Transcoding - Transcoding-as-a-Service.
-
-*Encore* is aimed at the advanced technical user that needs a scalable video transcoding tool - for example, as a part of their VOD (Video On Demand) transcoding pipeline.
+_Encore_ was created to scale, and abstract the transcoding _power of FFmpeg_, and to offer a simple solution for Transcoding - Transcoding-as-a-Service.
+svt
+_Encore_ is aimed at the advanced technical user that needs a scalable video transcoding tool - for example, as a part of their VOD (Video On Demand) transcoding pipeline.
 
 ## Features
 
@@ -30,11 +32,11 @@ _Encore_ is not
 
 _Built with_
 
-* Kotlin
-* Gradle
-* Spring Boot
-* FFmpeg
-* and many other great projects
+- Kotlin
+- Gradle
+- Spring Boot
+- FFmpeg
+- and many other great projects
 
 ## Documentation
 
@@ -70,7 +72,7 @@ Please see the [online documentation](https://svt.github.io/encore-doc/#the-user
 
 Copyright 2020 Sveriges Television AB.
 
-Encore is licensed under the 
+Encore is licensed under the
 
 [EUPL-1.2-or-later](LICENSE) license
 
