@@ -3,14 +3,14 @@ name: Create and publish Spring Boot jars and GraalVm native images
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   build-artifacts:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-arm64-8-core
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -18,10 +18,10 @@ jobs:
       - name: Set up GraalVm
         uses: graalvm/setup-graalvm@v1
         with:
-          java-version: '21'
-          distribution: 'graalvm-community'
+          java-version: "21"
+          distribution: "graalvm-community"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
@@ -32,7 +32,7 @@ jobs:
           export NATIVE_IMAGE_CONFIG_FILE="$(pwd)/native-image.properties"
           echo 'NativeImageArgs = -J-Xmx14G -H:+AddAllCharsets -J-Dfile.encoding=UTF-8' > $NATIVE_IMAGE_CONFIG_FILE
           ./gradlew build nativeCompile -x test
-      
+
       - name: Release Jars and native images
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
@@ -42,4 +42,3 @@ jobs:
             encore-web/build/native/nativeCompile/encore-web
             encore-worker/build/libs/encore-worker*boot.jar
             encore-worker/build/native/nativeCompile/encore-worker
-
